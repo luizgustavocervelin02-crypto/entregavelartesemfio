@@ -10,7 +10,7 @@
     --accent-hover: #7c3aed;
     --success: #10b981;
     --border-color: #334155;
-    
+
     --sidebar-width: 300px;
     --header-height: 70px;
 }
@@ -90,9 +90,11 @@ body {
 .sidebar-nav::-webkit-scrollbar {
     width: 6px;
 }
+
 .sidebar-nav::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .sidebar-nav::-webkit-scrollbar-thumb {
     background: var(--bg-hover);
     border-radius: 10px;
@@ -126,7 +128,7 @@ body {
 }
 
 .module-header:hover {
-    background-color: rgba(255,255,255,0.03);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .module-title {
@@ -146,7 +148,7 @@ body {
 .lesson-list {
     list-style: none;
     display: none;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .module-item.active .lesson-list {
@@ -167,7 +169,7 @@ body {
 
 .lesson-item:hover {
     color: var(--text-main);
-    background-color: rgba(255,255,255,0.02);
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .lesson-item.active {
@@ -180,6 +182,7 @@ body {
 .lesson-item.completed .ph-circle {
     display: none;
 }
+
 .lesson-item.completed i.ph-check-circle {
     color: var(--success);
     display: inline-block !important;
@@ -310,7 +313,7 @@ body {
     border: 1px solid var(--border-color);
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .video-placeholder {
@@ -321,7 +324,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background: linear-gradient(135deg, rgba(30,41,59,1) 0%, rgba(15,23,42,1) 100%);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
     color: var(--text-muted);
 }
 
@@ -375,7 +378,7 @@ body {
 }
 
 .complete-btn:hover {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .complete-btn.completed {
@@ -407,7 +410,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     border: 1px solid var(--border-color);
     text-decoration: none;
@@ -416,7 +419,7 @@ body {
 }
 
 .material-item:hover {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-color: var(--accent);
     transform: translateY(-2px);
 }
@@ -470,7 +473,7 @@ body {
 .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     z-index: 90;
     display: none;
@@ -478,28 +481,250 @@ body {
     transition: opacity 0.3s;
 }
 
+/* Modal de Login */
+.login-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-modal-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.login-icon {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.login-modal-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.login-modal-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Certificado Layout */
+.certificate-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    /* Fallback */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-content {
+    background-color: #f8fafc;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 8px solid var(--bg-card);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--bg-dark);
+    position: relative;
+}
+
+.certificate-content::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px dashed #94a3b8;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.cert-header {
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+
+.cert-header i {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cert-body p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.cert-body h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    margin: 1rem 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    min-width: 50%;
+}
+
+.cert-footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2rem;
+}
+
+.cert-footer p {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.download-cert-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-cert-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Responsividade Certificado */
+@media (max-width: 768px) {
+    .certificate-wrapper {
+        aspect-ratio: auto;
+        min-height: 400px;
+    }
+
+    .cert-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .cert-body h1 {
+        font-size: 2rem;
+    }
+
+    .cert-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
 /* Responsiveness */
 @media (max-width: 900px) {
     .sidebar {
         transform: translateX(-100%);
     }
-    
+
     .sidebar.open {
         transform: translateX(0);
     }
-    
+
     .main-content {
         margin-left: 0;
     }
-    
+
     .menu-btn {
         display: block;
     }
-    
+
     .close-sidebar-btn {
         display: block;
     }
-    
+
     .sidebar-overlay.show {
         display: block;
         opacity: 1;
@@ -510,30 +735,30 @@ body {
     .content-wrapper {
         padding: 1rem;
     }
-    
+
     .lesson-info {
         padding: 1.5rem;
     }
-    
+
     .lesson-header {
         flex-direction: column;
     }
-    
+
     .complete-btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .lesson-navigation {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .nav-btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .user-info {
         display: none;
     }

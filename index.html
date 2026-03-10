@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar -->
@@ -57,11 +59,12 @@
                 </div>
                 <div class="user-profile">
                     <div class="user-info">
-                        <span class="user-name">Aluno</span>
+                        <span class="user-name" id="userNameDisplay">Aluno</span>
                         <span class="user-role">Membro Premium</span>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://ui-avatars.com/api/?name=Aluno&background=8b5cf6&color=fff" alt="Avatar">
+                        <img id="userAvatar" src="https://ui-avatars.com/api/?name=Aluno&background=8b5cf6&color=fff"
+                            alt="Avatar">
                     </div>
                 </div>
             </header>
@@ -69,10 +72,31 @@
             <div class="content-wrapper">
                 <div class="lesson-container">
                     <!-- Video Area -->
-                    <div class="video-wrapper">
+                    <div class="video-wrapper" id="videoWrapper">
                         <div class="video-placeholder" id="videoPlaceholder">
                             <i class="ph ph-play-circle play-icon"></i>
                             <p>Selecione uma aula para começar</p>
+                        </div>
+                    </div>
+
+                    <!-- Layout do Certificado (Oculto por Padrão) -->
+                    <div class="certificate-wrapper" id="certificateWrapper" style="display: none;">
+                        <div class="certificate-content">
+                            <div class="cert-header">
+                                <i class="ph-fill ph-certificate"></i>
+                                <h2>Certificado de Conclusão</h2>
+                            </div>
+                            <div class="cert-body">
+                                <p>Certificamos que</p>
+                                <h1 class="student-name" id="certStudentName">Nome do Aluno</h1>
+                                <p>concluiu com êxito o curso <br><strong>O Seu Entregável Premium</strong></p>
+                            </div>
+                            <div class="cert-footer">
+                                <p>Emitido em: <span id="certDate">00/00/0000</span></p>
+                                <button class="download-cert-btn" id="downloadCertBtn">
+                                    <i class="ph ph-download-simple"></i> Baixar Certificado
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -86,7 +110,9 @@
                             </button>
                         </div>
                         <div class="lesson-description" id="lessonDescription">
-                            <p>Esta é uma estrutura simples que criamos para o seu entregável. Navegue pelo menu lateral para acessar o conteúdo. A partir daqui, podemos ir evoluindo e ajustando a área de membros conforme a sua necessidade.</p>
+                            <p>Esta é uma estrutura simples que criamos para o seu entregável. Navegue pelo menu lateral
+                                para acessar o conteúdo. A partir daqui, podemos ir evoluindo e ajustando a área de
+                                membros conforme a sua necessidade.</p>
                         </div>
 
                         <!-- Materiais Complementares -->
@@ -115,6 +141,26 @@
     <!-- Overlay for mobile sidebar -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+    <!-- Login Modal -->
+    <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal-box">
+            <div class="login-icon">
+                <i class="ph-fill ph-rocket-launch"></i>
+            </div>
+            <h2>Bem-vindo à Área de Membros</h2>
+            <p>Por favor, informe seu nome completo para acessar o conteúdo e emitir seu certificado ao final.</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="studentNameInput">Seu nome completo</label>
+                    <input type="text" id="studentNameInput" placeholder="Ex: João da Silva" required
+                        autocomplete="off">
+                </div>
+                <button type="submit" class="login-btn">Acessar Área de Membros</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
