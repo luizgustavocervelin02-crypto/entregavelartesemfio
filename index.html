@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Membros - Seu Entregável</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="ph-fill ph-rocket-launch"></i>
+                    <span>Premium</span>
+                </div>
+                <button class="close-sidebar-btn" id="closeSidebarBtn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <p class="nav-section-title">Conteúdo</p>
+                <ul class="module-list" id="moduleList">
+                    <!-- Modulos serão injetados via JS -->
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Progresso</span>
+                        <span id="progressText">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-btn" id="menuBtn">
+                        <i class="ph ph-list"></i>
+                    </button>
+                    <h1 class="page-title" id="pageTitle">Bem-vindo(a)!</h1>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Aluno</span>
+                        <span class="user-role">Membro Premium</span>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://ui-avatars.com/api/?name=Aluno&background=8b5cf6&color=fff" alt="Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="lesson-container">
+                    <!-- Video Area -->
+                    <div class="video-wrapper">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <i class="ph ph-play-circle play-icon"></i>
+                            <p>Selecione uma aula para começar</p>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Info -->
+                    <div class="lesson-info">
+                        <div class="lesson-header">
+                            <h2 class="lesson-title" id="lessonTitle">Bem-vindo à sua nova plataforma</h2>
+                            <button class="complete-btn" id="completeBtn">
+                                <i class="ph ph-check-circle"></i>
+                                Marcar como concluída
+                            </button>
+                        </div>
+                        <div class="lesson-description" id="lessonDescription">
+                            <p>Esta é uma estrutura simples que criamos para o seu entregável. Navegue pelo menu lateral para acessar o conteúdo. A partir daqui, podemos ir evoluindo e ajustando a área de membros conforme a sua necessidade.</p>
+                        </div>
+
+                        <!-- Materiais Complementares -->
+                        <div class="materials-section" id="materialsSection" style="display: none;">
+                            <h3>Materiais Complementares</h3>
+                            <div class="materials-list" id="materialsList">
+                                <!-- Materiais injetados via JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="lesson-navigation">
+                        <button class="nav-btn prev-btn" id="prevBtn" disabled>
+                            <i class="ph ph-caret-left"></i> Aula Anterior
+                        </button>
+                        <button class="nav-btn next-btn" id="nextBtn">
+                            Próxima Aula <i class="ph ph-caret-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
