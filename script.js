@@ -2,41 +2,59 @@
 const modulesData = [
     {
         id: 1,
-        title: "Video Aulas",
+        title: "Módulo 1 - Iniciante",
         lessons: [
-            { id: 101, title: "Boas-vindas", duration: "05:20", completed: false, description: "Seja muito bem vindo à nossa área de membros. Neste vídeo explico como você vai aproveitar ao máximo este conteúdo." },
-            { id: 102, title: "Como acessar o suporte", duration: "03:15", completed: false, description: "Aprenda a utilizar nossos canais de suporte para tirar todas as suas dúvidas." },
-            {
-                id: 103,
-                title: "O Primeiro Passo",
-                duration: "15:40",
-                completed: false,
-                description: "Nesta aula vamos dar o primeiro passo na execução do seu projeto. Preste atenção aos detalhes.",
-                materials: [
-                    { name: "Checklist Inicial.pdf", icon: "ph-file-pdf" },
-                    { name: "Planilha de Organização.xlsx", icon: "ph-file-xls" }
-                ]
-            },
-            { id: 104, title: "Configurando a Estrutura", duration: "25:10", completed: false, description: "Vamos configurar toda a estrutura necessária para o funcionamento do seu projeto." },
-            { id: 105, title: "Colocando a mão na massa", duration: "30:00", completed: false, description: "Hora de aplicar tudo o que foi planejado." }
+            { id: 101, title: "Introdução e Fundamentos", duration: "10:00", completed: false, description: "Aprenda os fundamentos do crochê, desde a escolha dos materiais até seu primeiro vestido completo." },
+            { id: 102, title: "Seu Primeiro Vestido", duration: "45:00", completed: false, description: "Acompanhe o passo a passo para criar o primeiro vestido inteiro em crochê." }
         ]
     },
     {
         id: 2,
-        title: "Bônus",
+        title: "Módulo 2 - Intermediário",
         lessons: [
-            { id: 201, title: "Bônus: Otimizações de Resultado", duration: "12:30", completed: false, description: "Como escalar e otimizar aquilo que já está funcionando." },
-            { id: 202, title: "Bônus: Próximos Passos", duration: "08:45", completed: false, description: "O que fazer após concluir todas as etapas do projeto." }
+            { id: 201, title: "Confecção de Vestidos Femininos", duration: "25:30", completed: false, description: "Domine a confecção de vestidos femininos com receitas em vídeo e escritas, para adultos e crianças." },
+            { id: 202, title: "Leitura de Receitas e Medidas", duration: "30:00", completed: false, description: "Como ler receitas e ajustar tamanhos com precisão." }
         ]
     },
     {
         id: 3,
+        title: "Módulo 3 - Avançado",
+        lessons: [
+            { id: 301, title: "Técnicas Avançadas de Acabamento", duration: "35:00", completed: false, description: "Técnicas avançadas para criar peças com acabamento profissional e detalhes que valorizam seu trabalho." }
+        ]
+    },
+    {
+        id: 4,
+        title: "Módulo 4 - Bônus Exclusivos 1",
+        lessons: [
+            { id: 401, title: "50 Bolsas de Crochê", duration: "20:00", completed: false, description: "Acesse 50 lindos modelos exclusivos de bolsas em crochê." },
+            { id: 402, title: "50 Biquínis e Croppeds", duration: "25:00", completed: false, description: "Instruções completas de 50 opções imperdíveis moda praia." },
+            { id: 403, title: "50 Tapetes de Crochê", duration: "20:00", completed: false, description: "Uma coletânea de 50 tapetes decorativos para vender e encantar clientes." }
+        ]
+    },
+    {
+        id: 5,
+        title: "Módulo 5 - Seus Produtos Digitais",
+        lessons: [
+            { id: 501, title: "Pacotão de Receitas e Guia", duration: "15:00", completed: false, description: "Acesse todos os seus produtos digitais: receitas de Natal, guia de lucro, pacotão de receitas e muito mais!" }
+        ]
+    },
+    {
+        id: 6,
+        title: "Módulo 6 - Bônus Exclusivos 2",
+        lessons: [
+            { id: 601, title: "Guias, Tabelas e Mini Cursos", duration: "40:00", completed: false, description: "Guias, tabelas, receitas extras e mini cursos para você se destacar no crochê!" }
+        ]
+    },
+    {
+        id: 7,
         title: "Certificado",
         lessons: [
-            { id: 301, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
+            { id: 701, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
         ]
     }
 ];
+
 
 // Estado da Aplicação
 let state = {
