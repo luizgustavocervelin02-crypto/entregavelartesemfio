@@ -2,18 +2,12 @@
 const modulesData = [
     {
         id: 1,
-        title: "Módulo 1: Comece por aqui",
+        title: "Video Aulas",
         lessons: [
             { id: 101, title: "Boas-vindas", duration: "05:20", completed: false, description: "Seja muito bem vindo à nossa área de membros. Neste vídeo explico como você vai aproveitar ao máximo este conteúdo." },
-            { id: 102, title: "Como acessar o suporte", duration: "03:15", completed: false, description: "Aprenda a utilizar nossos canais de suporte para tirar todas as suas dúvidas." }
-        ]
-    },
-    {
-        id: 2,
-        title: "Módulo 2: O seu Entregável",
-        lessons: [
+            { id: 102, title: "Como acessar o suporte", duration: "03:15", completed: false, description: "Aprenda a utilizar nossos canais de suporte para tirar todas as suas dúvidas." },
             {
-                id: 201,
+                id: 103,
                 title: "O Primeiro Passo",
                 duration: "15:40",
                 completed: false,
@@ -23,23 +17,23 @@ const modulesData = [
                     { name: "Planilha de Organização.xlsx", icon: "ph-file-xls" }
                 ]
             },
-            { id: 202, title: "Configurando a Estrutura", duration: "25:10", completed: false, description: "Vamos configurar toda a estrutura necessária para o funcionamento do seu projeto." },
-            { id: 203, title: "Colocando a mão na massa", duration: "30:00", completed: false, description: "Hora de aplicar tudo o que foi planejado." }
+            { id: 104, title: "Configurando a Estrutura", duration: "25:10", completed: false, description: "Vamos configurar toda a estrutura necessária para o funcionamento do seu projeto." },
+            { id: 105, title: "Colocando a mão na massa", duration: "30:00", completed: false, description: "Hora de aplicar tudo o que foi planejado." }
+        ]
+    },
+    {
+        id: 2,
+        title: "Bônus",
+        lessons: [
+            { id: 201, title: "Bônus: Otimizações de Resultado", duration: "12:30", completed: false, description: "Como escalar e otimizar aquilo que já está funcionando." },
+            { id: 202, title: "Bônus: Próximos Passos", duration: "08:45", completed: false, description: "O que fazer após concluir todas as etapas do projeto." }
         ]
     },
     {
         id: 3,
-        title: "Módulo 3: Avançado",
+        title: "Certificado",
         lessons: [
-            { id: 301, title: "Otimizações de Resultado", duration: "12:30", completed: false, description: "Como escalar e otimizar aquilo que já está funcionando." },
-            { id: 302, title: "Próximos Passos", duration: "08:45", completed: false, description: "O que fazer após concluir todas as etapas do projeto." }
-        ]
-    },
-    {
-        id: 4,
-        title: "Certificado de Conclusão",
-        lessons: [
-            { id: 401, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
+            { id: 301, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
         ]
     }
 ];
