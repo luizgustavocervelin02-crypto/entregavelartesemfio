@@ -37,18 +37,29 @@ const modulesData = [
             { id: 401, title: "Como Vender Mais pela Internet", duration: "20:00", completed: false, description: "Estratégias práticas para usar as redes sociais como vitrine e atrair clientes reais.", videoUrl: "https://www.youtube.com/embed/ioZL9p2vnNY" },
             { id: 402, title: "Precificação Descomplicada", duration: "25:00", completed: false, description: "Aprenda a calcular o valor da sua hora, materiais e lucro sem medo de errar no preço.", videoUrl: "https://www.youtube.com/embed/I7CJriiiA3o" },
             { id: 403, title: "4 Formas de Vender Online", duration: "15:00", completed: false, description: "Um panorama sobre marketplaces, Instagram, WhatsApp e vendas diretas.", videoUrl: "https://www.youtube.com/embed/RvjySdwHAAg" },
-            { id: 404, title: "5 Dicas de Ouro para o Sucesso", duration: "22:00", completed: false, description: "Mentalidade empreendedora e gatilhos mentais para valorizar seu trabalho artesanal.", videoUrl: "https://www.youtube.com/embed/PpS93qukmy8" },
+            { id: 404, title: "5 Dicas de Ouro para o Sucesso", duration: "22:00", completed: false, description: "Mentalidade empreendedora e gatilhos mentais para valorizar seu trabalho artesanal.", videoUrl: "https://www.youtube.com/embed/PpS93qukmy8" }
+        ]
+    },
+    {
+        id: 5,
+        title: "Módulo 5: Bônus Exclusivos",
+        lessons: [
             {
-                id: 405,
-                title: "Material Bônus e Certificado",
+                id: 501,
+                title: "Material Bônus e Gráficos",
                 duration: "00:00",
                 completed: false,
-                description: "Aqui fica seu acesso aos materiais exclusivos e área para emissão do seu diploma do curso Artes em Fios.",
-                materials: [
-                    { name: "ACESSAR PASTA DE GRÁFICOS (Google Drive)", icon: "ph-link", url: "https://drive.google.com/drive/folders/1zhgOoitWSV1867HspQGkpKI_FrMjMbV2?usp=drive_link" }
-                ],
-                isCertificate: true
+                description: "Neste módulo você tem acesso liberado à pasta com todos os gráficos e receitas do curso.",
+                driveUrl: "https://drive.google.com/drive/folders/1zhgOoitWSV1867HspQGkpKI_FrMjMbV2?usp=drive_link",
+                isBonus: true
             }
+        ]
+    },
+    {
+        id: 6,
+        title: "Certificado",
+        lessons: [
+            { id: 601, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
         ]
     }
 ];
@@ -244,6 +255,20 @@ function updateLessonView() {
         videoWrapper.style.display = 'none';
         certificateWrapper.style.display = 'flex';
         checkCertificatePermission();
+    } else if (currentLesson.isBonus) {
+        certificateWrapper.style.display = 'none';
+        videoWrapper.style.display = 'block';
+
+        videoWrapper.innerHTML = `
+            <div class="video-placeholder" style="background: var(--bg-card); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem; text-align: center;">
+                <i class="ph ph-folder-open play-icon" style="color: var(--accent); font-size: 5rem; margin-bottom: 1rem; cursor: default;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Meus Bônus e Gráficos</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.5;">Aqui está a pasta completa hospedada no Google Drive com todos os seus gráficos extras, tabelas e receitas para baixar com comodidade.</p>
+                <a href="${currentLesson.driveUrl}" target="_blank" rel="noopener noreferrer" style="background-color: var(--accent); color: white; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: background-color 0.2s;">
+                    <i class="ph ph-link" style="font-size: 1.25rem;"></i> ACESSAR PASTA NO DRIVE
+                </a>
+            </div>
+        `;
     } else {
         certificateWrapper.style.display = 'none';
         videoWrapper.style.display = 'block';
