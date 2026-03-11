@@ -2,52 +2,53 @@
 const modulesData = [
     {
         id: 1,
-        title: "Módulo 1 - Iniciantes",
+        title: "Módulo 1: Iniciante (O Despertar do Crochê)",
         lessons: [
-            { id: 101, title: "Aula 1: Materiais e Agulhas", duration: "10:00", completed: false, description: "Aprenda sobre os fundamentos do crochê, desde a escolha dos fios, agulhas ideais e materiais corretos para o seu primeiro laço.", videoUrl: "https://www.youtube.com/embed/V5kXXY1rLcw" },
-            { id: 102, title: "Aula 2: Ponto Correntinha (O Início)", duration: "15:00", completed: false, description: "A correntinha é a base de quase todos os trabalhos em crochê. Acompanhe o passo a passo para destrinchar esse começo.", videoUrl: "https://www.youtube.com/embed/l8n9D7RmsfU" },
-            { id: 103, title: "Aula 3: Ponto Baixo Passo a Passo", duration: "18:30", completed: false, description: "Como fazer o ponto baixo com precisão e manter sua peça reta." },
-            { id: 104, title: "Aula 4: Ponto Alto Descomplicado", duration: "24:00", completed: false, description: "Aumentando a altura do trabalho com o famoso Ponto Alto." }
+            { id: 101, title: "Crochê do Zero: Aula Completa", duration: "10:00", completed: false, description: "Guia definitivo para iniciantes, ensinando desde como segurar a agulha até os primeiros pontos.", videoUrl: "https://www.youtube.com/embed/Tmpu-L82dU0" },
+            { id: 102, title: "Pontos Básicos e Fundamentais", duration: "15:00", completed: false, description: "Aula detalhada sobre correntinha, ponto baixo e ponto alto com um dos maiores mestres do Brasil.", videoUrl: "https://www.youtube.com/embed/cgiycyM5kFs" },
+            { id: 103, title: "Aprenda Crochê em 5 Passos", duration: "18:30", completed: false, description: "Um método simplificado para dominar a técnica inicial de forma rápida e prática.", videoUrl: "https://www.youtube.com/embed/ZQM1GS3uDz8" },
+            { id: 104, title: "Primeira Peça Passo a Passo", duration: "24:00", completed: false, description: "Tutorial focado em aplicar os pontos aprendidos em uma estrutura simples e funcional.", videoUrl: "https://www.youtube.com/embed/s6bX_52dZ44" }
         ]
     },
     {
         id: 2,
-        title: "Módulo 2 - Suas Primeiras Peças",
+        title: "Módulo 2: Intermediário (Evoluindo a Técnica)",
         lessons: [
-            { id: 201, title: "Fazendo um tapete retangular simples", duration: "35:30", completed: false, description: "Domine a confecção de tapetes retangulares e aprendendo a leitura correta das receitas e da contagem de pontos." },
-            { id: 202, title: "Cesto organizador em Fio de Malha", duration: "45:00", completed: false, description: "Utilizando fio de malha para criar uma peça útil e rápida." }
+            { id: 201, title: "Como Ler Gráficos de Crochê", duration: "35:30", completed: false, description: "Desmistificando os símbolos e diagramas para que o aluno consiga seguir qualquer receita.", videoUrl: "https://www.youtube.com/embed/0fkBczqcMbo" },
+            { id: 202, title: "Blusa de Crochê Intermediária", duration: "45:00", completed: false, description: "Passo a passo de uma peça de vestuário moderna, ideal para praticar modelagem simples.", videoUrl: "https://www.youtube.com/embed/HmAdVlWTdS4" },
+            { id: 203, title: "Tutorial Blusa Fácil (Marie Castro)", duration: "30:00", completed: false, description: "Técnica de construção de peças sem costura, elevando o nível de acabamento.", videoUrl: "https://www.youtube.com/embed/vA_ku21x3Wc" },
+            { id: 204, title: "Bicos e Barrados Elaborados", duration: "25:00", completed: false, description: "Aula sobre acabamentos que valorizam qualquer peça, focando em pontos combinados.", videoUrl: "https://www.youtube.com/embed/060Xe0Rtuxg" }
         ]
     },
     {
         id: 3,
-        title: "Módulo 3 - Avançado",
+        title: "Módulo 3: Avançado (Maestria e Arte)",
         lessons: [
-            { id: 301, title: "Técnicas Avançadas de Acabamento", duration: "35:00", completed: false, description: "Técnicas avançadas para criar peças com acabamento invisível, profissional e detalhes que valorizam seu trabalho." }
+            { id: 301, title: "Introdução ao Crochê Irlandês", duration: "35:00", completed: false, description: "A técnica mais sofisticada do crochê, focada em relevos e motivos florais complexos.", videoUrl: "https://www.youtube.com/embed/rPWyxG1JEpQ" },
+            { id: 302, title: "Flor de Crochê Irlandês Avançada", duration: "40:00", completed: false, description: "Tutorial detalhado de um motivo clássico que exige alta precisão e controle de tensão.", videoUrl: "https://www.youtube.com/embed/RwnHzq2Vzwk" },
+            { id: 303, title: "Bico de Crochê Nível 117", duration: "25:00", completed: false, description: "Um dos bicos mais complexos e detalhados, ideal para peças de alto valor agregado.", videoUrl: "https://www.youtube.com/embed/ehMuPaE_9W8" },
+            { id: 304, title: "Técnica de Canto Xadrez", duration: "30:00", completed: false, description: "Geometria avançada no crochê para criar padrões visuais impactantes e simétricos.", videoUrl: "https://www.youtube.com/embed/4Nna4tkW4z8" }
         ]
     },
     {
         id: 4,
-        title: "Módulo 4 - Gráficos e Bônus",
+        title: "Módulo 4: Business (Lucrando com sua Arte)",
         lessons: [
+            { id: 401, title: "Como Vender Mais pela Internet", duration: "20:00", completed: false, description: "Estratégias práticas para usar as redes sociais como vitrine e atrair clientes reais.", videoUrl: "https://www.youtube.com/embed/ioZL9p2vnNY" },
+            { id: 402, title: "Precificação Descomplicada", duration: "25:00", completed: false, description: "Aprenda a calcular o valor da sua hora, materiais e lucro sem medo de errar no preço.", videoUrl: "https://www.youtube.com/embed/I7CJriiiA3o" },
+            { id: 403, title: "4 Formas de Vender Online", duration: "15:00", completed: false, description: "Um panorama sobre marketplaces, Instagram, WhatsApp e vendas diretas.", videoUrl: "https://www.youtube.com/embed/RvjySdwHAAg" },
+            { id: 404, title: "5 Dicas de Ouro para o Sucesso", duration: "22:00", completed: false, description: "Mentalidade empreendedora e gatilhos mentais para valorizar seu trabalho artesanal.", videoUrl: "https://www.youtube.com/embed/PpS93qukmy8" },
             {
-                id: 401,
-                title: "Acesso aos Gráficos e Receitas",
+                id: 405,
+                title: "Material Bônus e Certificado",
                 duration: "00:00",
                 completed: false,
-                description: "Acesse o link abaixo para abrir a pasta exclusiva do Google Drive com centenas de gráficos, tabelas e bônus.",
+                description: "Aqui fica seu acesso aos materiais exclusivos e área para emissão do seu diploma do curso Artes em Fios.",
                 materials: [
                     { name: "ACESSAR PASTA DE GRÁFICOS (Google Drive)", icon: "ph-link", url: "https://drive.google.com/drive/folders/1zhgOoitWSV1867HspQGkpKI_FrMjMbV2?usp=drive_link" }
-                ]
-            },
-            { id: 402, title: "50 Bolsas de Crochê (Bônus)", duration: "20:00", completed: false, description: "Acesse lindos modelos exclusivos de bolsas em crochê." },
-            { id: 403, title: "50 Biquínis e Croppeds (Bônus)", duration: "25:00", completed: false, description: "Instruções completas de opções imperdíveis para moda praia." }
-        ]
-    },
-    {
-        id: 5,
-        title: "Certificado",
-        lessons: [
-            { id: 501, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
+                ],
+                isCertificate: true
+            }
         ]
     }
 ];
