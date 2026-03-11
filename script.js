@@ -2,55 +2,52 @@
 const modulesData = [
     {
         id: 1,
-        title: "Módulo 1 - Iniciante",
+        title: "Módulo 1 - Iniciantes",
         lessons: [
-            { id: 101, title: "Introdução e Fundamentos", duration: "10:00", completed: false, description: "Aprenda os fundamentos do crochê, desde a escolha dos materiais até seu primeiro vestido completo." },
-            { id: 102, title: "Seu Primeiro Vestido", duration: "45:00", completed: false, description: "Acompanhe o passo a passo para criar o primeiro vestido inteiro em crochê." }
+            { id: 101, title: "Aula 1: Materiais e Agulhas", duration: "10:00", completed: false, description: "Aprenda sobre os fundamentos do crochê, desde a escolha dos fios, agulhas ideais e materiais corretos para o seu primeiro laço.", videoUrl: "https://www.youtube.com/embed/V5kXXY1rLcw" },
+            { id: 102, title: "Aula 2: Ponto Correntinha (O Início)", duration: "15:00", completed: false, description: "A correntinha é a base de quase todos os trabalhos em crochê. Acompanhe o passo a passo para destrinchar esse começo.", videoUrl: "https://www.youtube.com/embed/l8n9D7RmsfU" },
+            { id: 103, title: "Aula 3: Ponto Baixo Passo a Passo", duration: "18:30", completed: false, description: "Como fazer o ponto baixo com precisão e manter sua peça reta." },
+            { id: 104, title: "Aula 4: Ponto Alto Descomplicado", duration: "24:00", completed: false, description: "Aumentando a altura do trabalho com o famoso Ponto Alto." }
         ]
     },
     {
         id: 2,
-        title: "Módulo 2 - Intermediário",
+        title: "Módulo 2 - Suas Primeiras Peças",
         lessons: [
-            { id: 201, title: "Confecção de Vestidos Femininos", duration: "25:30", completed: false, description: "Domine a confecção de vestidos femininos com receitas em vídeo e escritas, para adultos e crianças." },
-            { id: 202, title: "Leitura de Receitas e Medidas", duration: "30:00", completed: false, description: "Como ler receitas e ajustar tamanhos com precisão." }
+            { id: 201, title: "Fazendo um tapete retangular simples", duration: "35:30", completed: false, description: "Domine a confecção de tapetes retangulares e aprendendo a leitura correta das receitas e da contagem de pontos." },
+            { id: 202, title: "Cesto organizador em Fio de Malha", duration: "45:00", completed: false, description: "Utilizando fio de malha para criar uma peça útil e rápida." }
         ]
     },
     {
         id: 3,
         title: "Módulo 3 - Avançado",
         lessons: [
-            { id: 301, title: "Técnicas Avançadas de Acabamento", duration: "35:00", completed: false, description: "Técnicas avançadas para criar peças com acabamento profissional e detalhes que valorizam seu trabalho." }
+            { id: 301, title: "Técnicas Avançadas de Acabamento", duration: "35:00", completed: false, description: "Técnicas avançadas para criar peças com acabamento invisível, profissional e detalhes que valorizam seu trabalho." }
         ]
     },
     {
         id: 4,
-        title: "Módulo 4 - Bônus Exclusivos 1",
+        title: "Módulo 4 - Gráficos e Bônus",
         lessons: [
-            { id: 401, title: "50 Bolsas de Crochê", duration: "20:00", completed: false, description: "Acesse 50 lindos modelos exclusivos de bolsas em crochê." },
-            { id: 402, title: "50 Biquínis e Croppeds", duration: "25:00", completed: false, description: "Instruções completas de 50 opções imperdíveis moda praia." },
-            { id: 403, title: "50 Tapetes de Crochê", duration: "20:00", completed: false, description: "Uma coletânea de 50 tapetes decorativos para vender e encantar clientes." }
+            {
+                id: 401,
+                title: "Acesso aos Gráficos e Receitas",
+                duration: "00:00",
+                completed: false,
+                description: "Acesse o link abaixo para abrir a pasta exclusiva do Google Drive com centenas de gráficos, tabelas e bônus.",
+                materials: [
+                    { name: "ACESSAR PASTA DE GRÁFICOS (Google Drive)", icon: "ph-link", url: "https://drive.google.com/drive/folders/1zhgOoitWSV1867HspQGkpKI_FrMjMbV2?usp=drive_link" }
+                ]
+            },
+            { id: 402, title: "50 Bolsas de Crochê (Bônus)", duration: "20:00", completed: false, description: "Acesse lindos modelos exclusivos de bolsas em crochê." },
+            { id: 403, title: "50 Biquínis e Croppeds (Bônus)", duration: "25:00", completed: false, description: "Instruções completas de opções imperdíveis para moda praia." }
         ]
     },
     {
         id: 5,
-        title: "Módulo 5 - Seus Produtos Digitais",
-        lessons: [
-            { id: 501, title: "Pacotão de Receitas e Guia", duration: "15:00", completed: false, description: "Acesse todos os seus produtos digitais: receitas de Natal, guia de lucro, pacotão de receitas e muito mais!" }
-        ]
-    },
-    {
-        id: 6,
-        title: "Módulo 6 - Bônus Exclusivos 2",
-        lessons: [
-            { id: 601, title: "Guias, Tabelas e Mini Cursos", duration: "40:00", completed: false, description: "Guias, tabelas, receitas extras e mini cursos para você se destacar no crochê!" }
-        ]
-    },
-    {
-        id: 7,
         title: "Certificado",
         lessons: [
-            { id: 701, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
+            { id: 501, title: "Seu Certificado", duration: "00:00", completed: false, description: "Aqui você poderá emitir o seu certificado de conclusão. Lembrando que ele só será liberado após 7 dias do seu primeiro acesso.", isCertificate: true }
         ]
     }
 ];
@@ -250,11 +247,22 @@ function updateLessonView() {
         certificateWrapper.style.display = 'none';
         videoWrapper.style.display = 'block';
 
-        // Fake video reload
-        videoPlaceholder.innerHTML = '<i class="ph ph-spinner ph-spin play-icon"></i><p>Carregando vídeo...</p>';
-        setTimeout(() => {
-            videoPlaceholder.innerHTML = '<i class="ph ph-play-circle play-icon"></i><p>Clique para reproduzir</p>';
-        }, 500);
+        if (currentLesson.videoUrl) {
+            videoWrapper.innerHTML = `<iframe width="100%" height="100%" src="${currentLesson.videoUrl}" style="border:0; border-radius:16px; min-height: 400px; width: 100%; aspect-ratio: 16/9;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+            videoWrapper.innerHTML = `
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <i class="ph ph-play-circle play-icon"></i>
+                    <p>Carregando aula...</p>
+                </div>
+            `;
+            const videoPlaceholder = document.getElementById('videoPlaceholder');
+            // Fake video reload
+            videoPlaceholder.innerHTML = '<i class="ph ph-spinner ph-spin play-icon"></i><p>Carregando vídeo...</p>';
+            setTimeout(() => {
+                videoPlaceholder.innerHTML = '<i class="ph ph-play-circle play-icon"></i><p>Clique para reproduzir</p>';
+            }, 500);
+        }
     }
 
     // Materials
@@ -262,7 +270,9 @@ function updateLessonView() {
         materialsList.innerHTML = '';
         currentLesson.materials.forEach(mat => {
             const a = document.createElement('a');
-            a.href = "#";
+            a.href = mat.url || "#";
+            if (mat.url) a.target = "_blank";
+            if (mat.url) a.rel = "noopener noreferrer";
             a.className = 'material-item';
             a.innerHTML = `
                 <i class="ph ${mat.icon} material-icon"></i>
